@@ -2,16 +2,14 @@ package com.ghadiza.muslimmediaapp.ui
 
 import android.graphics.Bitmap
 import android.os.Build.VERSION.SDK_INT
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import androidx.lifecycle.ReportFragment.Companion.reportFragment
+import androidx.appcompat.app.AppCompatActivity
 import com.ghadiza.muslimmediaapp.R
 import com.ghadiza.muslimmediaapp.databinding.ActivityDetailBinding
-import com.ghadiza.muslimmediaapp.fragment.AboutAlQuranFragment
 import com.ghadiza.muslimmediaapp.model.network.ArticlesItem
 import com.squareup.picasso.Picasso
 
@@ -35,7 +33,7 @@ class DetailActivity : AppCompatActivity() {
             else -> intent.getParcelableExtra(NEWS_DATA)
         }
 
-        val newsDate = intent.getStringExtra(EXTRA_DATA_TIME)
+        val newsDate = intent.getStringExtra(EXTRA_DATA_DATE)
         val newsTime = intent.getStringExtra(EXTRA_DATA_TIME)
         val publishedAt = newsDate + newsTime
 
@@ -44,13 +42,13 @@ class DetailActivity : AppCompatActivity() {
             tvDetailAuthor.text = newsData?.author
             tvDetailPublishAt.text = publishedAt
             Picasso.get().load(newsData?.urlToImage).into(ivDetailImage)
+            setWebView(newsData)
         }
-
     }
 
     private fun setWebView(data: ArticlesItem?) {
         var loadingFinished = true
-        var redirect = false
+        var redirect = true
 
         binding.wvDetail.webViewClient = object: WebViewClient() {
             override fun shouldOverrideUrlLoading(
@@ -60,7 +58,7 @@ class DetailActivity : AppCompatActivity() {
                 if (!loadingFinished) {
                     redirect = true
                 }
-                loadingFinished = false
+                loadingFinished = true
                 view?.loadUrl(request?.url.toString())
 
                 return true
@@ -97,7 +95,7 @@ class DetailActivity : AppCompatActivity() {
 
     companion object {
         const val NEWS_DATA = "data"
-        const val EXTRA_DATE = "date"
+        const val EXTRA_DATA_DATE = "date"
         const val EXTRA_DATA_TIME = "time"
     }
 }

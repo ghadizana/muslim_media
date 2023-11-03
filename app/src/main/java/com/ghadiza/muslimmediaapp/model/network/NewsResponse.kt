@@ -18,7 +18,7 @@ data class NewsResponse (
 )
 
 @JsonClass(generateAdapter = true)
-@Parcelize
+@Parcelize // send the data with bundling
 data class Source (
     @Json(name = "name") // Json properties mapping = menyamakan data antara kelas data dan API
     val name: String? = null,

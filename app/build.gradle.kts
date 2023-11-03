@@ -2,7 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize") // implementing the Parcelable (send bundle of data)
-    id("com.google.devtools.ksp") // kotlin symbol processing : processing the json file
+    id("com.google.devtools.ksp") // kotlin symbol processing : processing the json file processing when processing the data
 }
 
 android {
@@ -54,7 +54,7 @@ dependencies {
     // Kotlin Codegen = code generator
     ksp("com.squareup.moshi:moshi-kotlin-codegen:1.14.0")
 
-    // Retrofit
+    // Retrofit = if we want to use data from API
     // HTTP client - with OkHttp
     // to retrieve data via REST based webservice
     implementation("com.squareup.retrofit2:retrofit:2.9.0")

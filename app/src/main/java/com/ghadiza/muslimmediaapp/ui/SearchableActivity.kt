@@ -69,6 +69,7 @@ class SearchableActivity : AppCompatActivity() {
                         loadingView.root.visibility = View.VISIBLE
                         tvNoNews.visibility = View.INVISIBLE
                         searchView.setQuery("", false)
+                        searchView.queryHint = query
                         searchView.clearFocus()
                     }
                     doMySearch(query)

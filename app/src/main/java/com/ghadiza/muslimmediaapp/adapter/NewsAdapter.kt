@@ -13,7 +13,6 @@ import com.squareup.picasso.Picasso
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
-import java.util.SimpleTimeZone
 
 class NewsAdapter: RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
     private val listNews = ArrayList<ArticlesItem>()
@@ -47,7 +46,6 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
         val timeArray = time?.split(":")?.toTypedArray()
 
         val calendar = Calendar.getInstance()
-
         dateArray?.let {
             calendar.set(Calendar.YEAR, it[0].toInt())
             calendar.set(Calendar.MONTH, it[1].toInt()-1)
@@ -55,7 +53,7 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
         }
         timeArray?.let {
             calendar.set(Calendar.HOUR_OF_DAY, it[0].toInt())
-            calendar.set(Calendar.MINUTE, it[0].toInt())
+            calendar.set(Calendar.MINUTE, it[1].toInt())
         }
 
         val dateResultFormat = SimpleDateFormat("EEE, dd MMMM", Locale.getDefault())
@@ -82,7 +80,7 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
         holder.itemView.setOnClickListener{
             val intent = Intent(it.context, DetailActivity::class.java)
             intent.putExtra(DetailActivity.NEWS_DATA, news)
-            intent.putExtra(DetailActivity.EXTRA_DATE, newsDate)
+            intent.putExtra(DetailActivity.EXTRA_DATA_DATE, newsDate)
             intent.putExtra(DetailActivity.EXTRA_DATA_TIME, newsTime)
             it.context.startActivity(intent)
         }

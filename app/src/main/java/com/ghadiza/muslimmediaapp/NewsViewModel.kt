@@ -10,6 +10,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+// menangai action ketika ada pengambilan data
 // saving the business logic and create terpisah antara UI dan logic
 // MutableLiveData = can be change, the key is var
 // LiveData = can't be change, the key is val
@@ -39,7 +40,7 @@ class NewsViewModel: ViewModel() {
                     if (response.isSuccessful) {
                         Log.i(
                             "ViewModel",
-                            "onResponse: ${response.body()}"
+                            "onResponse: Call success with HTTP status code ${response.body()}"
                         )
                         // memberikan respon value setelah fragment dipanggil
                         _commonMuslimNews.postValue(response.body())
@@ -154,6 +155,7 @@ class NewsViewModel: ViewModel() {
                             "ViewModel",
                             "onResponse: ${response.body()}"
                         )
+                        _searchNews.postValue(response.body())
                     } else Log.e(
                         "ViewModel",
                         "onResponse: Call error with HTTP status code ${response.code()}"
