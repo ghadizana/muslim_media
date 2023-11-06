@@ -9,7 +9,6 @@ import androidx.appcompat.widget.SearchView
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.ghadiza.muslimmediaapp.adapter.SectionPagerAdapter
 import com.ghadiza.muslimmediaapp.databinding.ActivityMainBinding
-import com.ghadiza.muslimmediaapp.ui.SearchableActivity
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {

@@ -22,7 +22,7 @@ interface ApiService {
         @Query("language") language: String = "en"
     ): Call<NewsResponse>
 
-    @GET("/v2/top-headline")
+    @GET("/v2/top-headlines")
     fun getAlJazeeraNews(
         @Query("sources") source: String = "al-jazeera-english"
     ): Call<NewsResponse>

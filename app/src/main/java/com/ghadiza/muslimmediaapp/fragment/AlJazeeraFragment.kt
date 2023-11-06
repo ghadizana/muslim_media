@@ -47,4 +47,9 @@ class AlJazeeraFragment : Fragment() {
             binding.loadingView.root.visibility = View.GONE
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }
