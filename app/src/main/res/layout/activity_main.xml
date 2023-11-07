@@ -22,6 +22,7 @@
             app:layout_scrollFlags="scroll|enterAlways"
             app:logo="@drawable/logo_text"
             app:popupTheme="@android:style/ThemeOverlay.Material.Light"
+            android:theme="@style/ThemeOverlay.SearchView"
             app:titleTextColor="@android:color/transparent" />
 
         <com.google.android.material.tabs.TabLayout
