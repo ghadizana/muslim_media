@@ -48,7 +48,7 @@ class DetailActivity : AppCompatActivity() {
 
     private fun setWebView(data: ArticlesItem?) {
         var loadingFinished = true
-        var redirect = true
+        var redirect = false
 
         binding.wvDetail.webViewClient = object: WebViewClient() {
             override fun shouldOverrideUrlLoading(
@@ -58,7 +58,7 @@ class DetailActivity : AppCompatActivity() {
                 if (!loadingFinished) {
                     redirect = true
                 }
-                loadingFinished = true
+                loadingFinished = false
                 view?.loadUrl(request?.url.toString())
 
                 return true
