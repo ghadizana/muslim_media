@@ -80,9 +80,6 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
                 .onlyScaleDown()
                 .placeholder(R.drawable.ic_logo)
                 .into(ivNews)
-//            Picasso.get().load(news.urlToImage)
-//                .placeholder(R.drawable.ic_logo)
-//                .into(ivNews)
         }
         holder.itemView.setOnClickListener{
             val intent = Intent(it.context, DetailActivity::class.java)
