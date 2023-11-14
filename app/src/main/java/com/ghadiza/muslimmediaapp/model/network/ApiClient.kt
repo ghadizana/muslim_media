@@ -6,7 +6,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
 // using object for creating single instance
-// for making request
+// for making request as client
 object ApiClient {
     fun provideApiService(): ApiService {
         val okHttpClient = OkHttpClient.Builder()
