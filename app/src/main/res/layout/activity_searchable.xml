@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.SearchableActivity"
     android:background="@color/white">
-    
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_view"
         android:layout_width="match_parent"
@@ -34,6 +33,7 @@
         android:id="@+id/tv_no_news"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
         android:text="@string/no_news_text"
         android:textSize="18sp"
         android:visibility="invisible"

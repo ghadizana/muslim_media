@@ -30,8 +30,9 @@
                     android:id="@+id/tv_detail_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:justificationMode="inter_word"
                     android:layout_marginTop="8dp"
-                    android:textAlignment="center"
                     android:textSize="24sp"
                     android:textStyle="bold"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -40,6 +41,7 @@
                     android:id="@+id/tv_detail_publishAt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_detail_title" />
@@ -48,6 +50,7 @@
                     android:id="@+id/tv_detail_author"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
                     android:layout_marginTop="8dp"
                     app:layout_constraintStart_toStartOf="@id/tv_detail_publishAt"
                     app:layout_constraintTop_toBottomOf="@+id/tv_detail_publishAt" />
@@ -73,7 +76,7 @@
                 android:id="@+id/toolbar_detail"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/white"
+                android:background="@color/light_blue"
                 app:layout_collapseMode="pin" />
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>

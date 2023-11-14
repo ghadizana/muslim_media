@@ -10,7 +10,7 @@
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="0dp"
+        android:elevation="15dp"
         android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
         app:layout_constraintTop_toTopOf="parent">
         
@@ -21,6 +21,7 @@
             android:background="@color/white"
             app:layout_scrollFlags="scroll|enterAlways"
             app:logo="@drawable/logo_text"
+            app:logoScaleType="fitStart"
             app:popupTheme="@android:style/ThemeOverlay.Material.Light"
             android:theme="@style/ThemeOverlay.SearchView"
             app:titleTextColor="@android:color/transparent" />
@@ -30,9 +31,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:elevation="0dp"
-            android:backgroundTint="@color/white"
-            app:tabIndicatorColor="@color/green"
-            app:tabSelectedTextColor="@color/black" />
+            android:backgroundTint="@android:color/white"
+            app:tabIndicatorColor="@color/dark_blue"
+            app:tabSelectedTextColor="@color/dark_blue" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

@@ -10,13 +10,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:indeterminate="true"
-        app:indicatorColor="@color/green"
+        app:indicatorColor="@color/dark_blue"
         app:trackColor="@color/gray_bg" />
     
     <TextView
         android:id="@+id/tv_login_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
         android:text="@string/getting_news"
         android:textSize="18sp" />
 

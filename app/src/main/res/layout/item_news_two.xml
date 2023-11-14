@@ -28,14 +28,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:contentDescription="@string/content_image_news_headline"
-                android:scaleType="centerCrop" />
-
+                android:scaleType="centerCrop"/>
         </com.google.android.material.card.MaterialCardView>
 
         <TextView
             android:id="@+id/tv_title_headline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
             android:layout_marginTop="8dp"
             android:maxLines="3"
             android:textAllCaps="false"
@@ -47,6 +47,7 @@
             android:id="@+id/tv_title_desc_headline"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
             android:layout_marginTop="8dp"
             android:maxLines="2"
             android:textAllCaps="false"
@@ -57,6 +58,7 @@
             android:id="@+id/tv_date_headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
             android:layout_marginTop="8dp"
             android:textAllCaps="false"
             android:textColor="@color/gray_text"
@@ -67,6 +69,7 @@
             android:id="@+id/tv_author_headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
             android:layout_marginStart="8dp"
             android:textAllCaps="false"
             android:textColor="@color/gray_text"
