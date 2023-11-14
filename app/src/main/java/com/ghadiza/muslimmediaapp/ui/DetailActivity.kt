@@ -23,7 +23,7 @@ class DetailActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbarDetail)
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)  // kembali ke halaman sebelumnya
-            title = getString(R.string.news_detail)
+            title = null
         }
 
         setContentView(binding.root)
