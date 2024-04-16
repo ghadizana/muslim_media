@@ -14,8 +14,8 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
-class NewsAdapter: RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
-    private val listNews = ArrayList<ArticlesItem>()
+class   NewsAdapter: RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
+    private val     listNews = ArrayList<ArticlesItem>()
 
     class MyViewHolder(var binding: ItemNewsOneBinding):
         RecyclerView.ViewHolder(binding.root)
@@ -80,6 +80,8 @@ class NewsAdapter: RecyclerView.Adapter<NewsAdapter.MyViewHolder>() {
                 .placeholder(R.drawable.ic_splash)
                 .into(ivNews)
         }
+
+
         holder.itemView.setOnClickListener{
             val intent = Intent(it.context, DetailActivity::class.java)
             intent.putExtra(DetailActivity.NEWS_DATA, news)

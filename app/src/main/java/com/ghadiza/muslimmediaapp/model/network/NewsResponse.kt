@@ -26,7 +26,7 @@ data class Source (
 
 @JsonClass(generateAdapter = true)
 @Parcelize
-data class ArticlesItem(
+data class  ArticlesItem(
     @Json(name = "publishedAt")
     val publishedAt: String? = null,
 

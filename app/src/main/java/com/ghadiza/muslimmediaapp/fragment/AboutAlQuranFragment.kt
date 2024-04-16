@@ -23,7 +23,7 @@ class AboutAlQuranFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentAboutAlQuranBinding.inflate(layoutInflater)
         return binding.root
     }
